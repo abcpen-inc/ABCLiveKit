@@ -15,6 +15,16 @@
 
 @property (nonatomic, assign) ABCVideoResolution videoResolution;//default ABCVideoResolutionMid
 
+/*
+ * 显示mutedImage
+ */
+@property (nonatomic, assign, getter=mutedVideo) BOOL mutedVideo;
+
+/*
+ * 音频静音
+ */
+@property (nonatomic, assign, getter=muted) BOOL muted;
+
 /**
  *  初始化ABCLivingManager
  *
