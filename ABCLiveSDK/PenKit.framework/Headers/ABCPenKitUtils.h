@@ -12,7 +12,7 @@ typedef enum BlueType{
     BlueType_NotConnected = 100, //未连接
     BlueType_Connected,          //连接成功
     BlueType_DisConnected,       //断开连接
-    BlueType_N2Connecting,       //搜索中连接中（N2）
+    BlueType_Connecting,       //搜索中连接中（N2）
     BlueType_N2UNREGISTERED      //N2未注册
 }BlueType;
 
@@ -32,8 +32,7 @@ typedef enum ABCPenType{
 - (void)n2ConnectStatusChange:(BlueType)blueType;
 - (void)activeN2NotePageNumForFirstStroke:(int) pageNum;
 - (void)getBluePadPoint:(CGPoint)point position:(int)position pressure:(float)pressure; //韩国本
-- (void)getBluePadPoint:(CGPoint)point isRoute:(BOOL)isRoute pressure:(float)pressure;  //robot
-- (void)getBluePadPoint:(CGPoint)point touchState:(int)touchState pressure:(float)pressure;  //robot new
+- (void)getBluePadPoint:(CGPoint)point canvasScale:(float)canvasScale touchState:(int)touchState pressure:(float)pressure;  //robot new
 
 - (void)paperSizeReady;
 - (void)addSelectPaperView:(UIView *)selView;
@@ -43,8 +42,8 @@ typedef enum ABCPenType{
 @interface ABCPenKitUtils : NSObject
 
 @property (nonatomic, assign) ABCPenType penType;
-@property (nonatomic, assign) BOOL isRobot;
-@property (nonatomic, assign) BOOL isConnected;
+@property (nonatomic, assign) BlueType connState;
+@property (nonatomic, assign, getter=isConnected) BOOL isConnected;//兼容老版
 @property (nonatomic, assign) CGSize size;
 @property (nonatomic, weak) id<ABCPenKitUtilsDelegate> delegate;
 @property (nonatomic, assign) int temperature;
