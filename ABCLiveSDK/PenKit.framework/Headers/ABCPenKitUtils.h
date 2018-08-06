@@ -13,6 +13,7 @@ typedef enum BlueType{
     BlueType_Connected,          //连接成功
     BlueType_DisConnected,       //断开连接
     BlueType_Connecting,       //搜索中连接中（N2）
+    BlueType_ConnectFail,        //连接失败
     BlueType_N2UNREGISTERED      //N2未注册
 }BlueType;
 
@@ -50,6 +51,8 @@ typedef enum ABCPenType{
 @property (nonatomic, assign) int temperature;
 @property (nonatomic, assign) int smFlag;
 @property (nonatomic, assign) CGSize paperSize;
+
+@property (nonatomic, assign, getter=connIndex) NSInteger connIndex;//非N2笔连接的笔
 
 
 //创建实例
