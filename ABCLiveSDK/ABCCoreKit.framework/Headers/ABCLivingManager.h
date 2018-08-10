@@ -25,6 +25,7 @@
  */
 @property (nonatomic, assign, getter=muted) BOOL muted;
 
+
 /**
  *  初始化ABCLivingManager
  *
@@ -34,6 +35,8 @@
  *  @return ABCLivingManager
  */
 -(instancetype _Nullable ) initABCLivingManager:(NSString *_Nullable) rid isPush:(BOOL) isPush isSuperManager:(BOOL) isSuperManager isrecord:(NSInteger)isrecord;
+
+-(BOOL) isPlaying;
 
 ///**
 // *  切换用户
