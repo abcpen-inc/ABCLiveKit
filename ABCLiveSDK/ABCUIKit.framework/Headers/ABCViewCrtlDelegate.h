@@ -21,6 +21,7 @@
 - (void)shareByShareType:(NSInteger)type
                   roomMo:(id)roomMo;
 
+- (void)onBlueToothClick;
 
 @end
 

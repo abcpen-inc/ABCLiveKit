@@ -15,6 +15,8 @@
 
 @property(nonatomic, strong) UIImage *mutedVideoImage;
 
+@property (nonatomic, strong) ABCRoomMo          *roomMo;
+
 -(instancetype) initABCLivingViewCtrlWithRoomMo:(ABCRoomMo *) roomMo;
 
 - (void)closeRoom:(BOOL) isNeedSend needDismiss:(BOOL)needDismiss;

@@ -13,8 +13,11 @@
 
 @property(nonatomic, weak) id<ABCViewCrtlDelegate> delegate;
 
+@property(nonatomic, strong) ABCRoomMo *roomMo;
+
 -(instancetype) initABCInteractiveViewCtrlWithRoomMo:(ABCRoomMo *) roomMo;
 
 - (void)closeRoom:(BOOL) isNeedSend needDismiss:(BOOL)needDismiss;
+
 
 @end

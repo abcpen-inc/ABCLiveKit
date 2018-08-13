@@ -8,15 +8,25 @@
 
 #import <UIKit/UIKit.h>
 
+@interface BlueDevCell:UITableViewCell
+
+@property (nonatomic, strong) void (^btnConnectClick)(void);
+
+@end
+
+
 @protocol BlueDevSelectViewDelegate <NSObject>
 
 @optional
 - (void)selectBlueDev:(NSInteger)index;
+- (void)reSearchDevice;
 
 @end
 
 @interface BlueDevSelectView : UIView
 
+@property (nonatomic, assign) NSString *emptyStr;
+@property (nonatomic, assign) NSInteger connIndex;
 @property (nonatomic, strong) NSArray *arrSource;
 @property (nonatomic, weak) id<BlueDevSelectViewDelegate> blueDevSelectViewDelegate;
 
