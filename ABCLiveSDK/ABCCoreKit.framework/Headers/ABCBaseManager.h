@@ -26,6 +26,8 @@
 -(id) getWBDelegateWithWhiteBoardId:(NSString *) whiteBoardId;
 
 -(void) managerRelease;
+
+-(void) refreshToken:(NSString *) token;
 /**
  * 发送白板cmd
  *
