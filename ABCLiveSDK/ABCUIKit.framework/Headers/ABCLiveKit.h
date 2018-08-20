@@ -23,3 +23,4 @@ FOUNDATION_EXPORT const unsigned char ABCLiveKitVersionString[];
 #import "ABCInteractiveViewController.h"
 #import "ABCLivingViewController.h"
 #import "AiPenUtils.h"
+#import "ABCLiveFloatingBoard.h"
