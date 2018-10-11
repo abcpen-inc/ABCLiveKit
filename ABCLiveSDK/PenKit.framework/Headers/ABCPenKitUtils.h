@@ -8,6 +8,14 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 
+#define N2_PEN_PAPER_WIDTH 81.0f
+#define N2_PEN_PAPER_HEIGHT 111.0f
+
+//#define UNIQUEID @"uniqueId"
+#define N2_NODE_ID @"n2_node_id"
+#define N2_SYNC_ONWER_ID @"n2_sync_onwer_id"
+#define SYNCSTATE @"syncState"  //0未同步，1同步中 2已同步
+
 typedef enum BlueType{
     BlueType_NotConnected = 100, //未连接
     BlueType_Connected,          //连接成功
@@ -22,7 +30,7 @@ typedef enum ABCPenType{
     ABCPenType_Equil = 2, //Equil笔
     ABCPenType_Pen2 = 3, //笔声智能笔2代
     ABCPenType_N2 = 4, //NeoSmartpen//请使用 startConnectN2进行直连
-
+    ABCPenType_AFPen = 5
 }ABCPenType;
 
 @protocol ABCPenKitUtilsDelegate <NSObject>
@@ -36,8 +44,15 @@ typedef enum ABCPenType{
 - (void)getBluePadPoint:(CGPoint)point canvasScale:(float)canvasScale touchState:(int)touchState pressure:(float)pressure;  //robot new
 - (void)getBluePadPoint:(CGPoint)point touchState:(int)touchState pressure:(float)pressure;  //robot new
 
+- (void)getBluePadOriginalPoint:(CGPoint)point touchState:(int)touchState pressure:(float)pressure;  //N2
+
 - (void)paperSizeReady;
 - (void)addSelectPaperView:(UIView *)selView;
+
+//offline本子列表
+- (void)showOfflineDataList:(NSArray *)array;
+- (void)synchroFish:(NSInteger)nodeId arrStroke:(NSArray *)arrStroke;
+- (void)synchroProcess:(float)process noteId:(NSInteger) nodeId;
 
 @end
 
@@ -53,6 +68,15 @@ typedef enum ABCPenType{
 @property (nonatomic, assign) CGSize paperSize;
 
 @property (nonatomic, assign, getter=connIndex) NSInteger connIndex;//非N2笔连接的笔
+
+//N2 offline
+@property (nonatomic, strong) NSMutableArray *menuList;
+
+@property (nonatomic, strong) NSString *currectOnwerId;
+
+@property (nonatomic, assign) NSInteger currectNodeId;
+
+@property (nonatomic, assign) NSInteger currectPageId;
 
 
 //创建实例
@@ -88,5 +112,16 @@ typedef enum ABCPenType{
 
 -(BOOL) hasN2PenRegistered;
 
+//清除robot设备,修改老师端后删除
+- (void)removeAllDevice;
+
+-(void) setN2OffLineDelegate:(BOOL)isClear; //isClear YES清空 NO设置
+
+//nodeId
+-(void) synchroOneBookById:(int)ownerId nodeId:(int) nodeId;
+
+-(void) synchroAllBook;
+
+-(NSString *) resetCurrectOwnerId;
 
 @end
