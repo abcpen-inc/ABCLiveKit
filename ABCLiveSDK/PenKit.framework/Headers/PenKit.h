@@ -19,5 +19,6 @@ FOUNDATION_EXPORT const unsigned char PenKitVersionString[];
 #define ROBOT_P7_WIDTH 14335.0
 #define ROBOT_P7_HEIGHT 8191.0
 
-#import "ABCPenKitUtils.h"
+//#import "ABCPenKitUtils.h"
+#import "ABCPenKitManager.h"
 #import "ABCStroke.h"
