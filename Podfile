@@ -1,5 +1,6 @@
 platform:ios,'9.0'
 workspace ‘ABCLiveDemo’
+use_frameworks!
 
 project 'ABCLiveDemo/ABCLiveDemo.xcodeproj'
 

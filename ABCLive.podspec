@@ -1,13 +1,13 @@
 Pod::Spec.new do |s|
   s.name             = "ABCLive"
-  s.version          = "1.0.9"
+  s.version          = "1.1.0.6"
   s.summary          = "ABCLive."
   s.description      = "ABCLive of bing"
   s.homepage         = "http://www.abcpen.com"
   s.license          = 'MIT'
   s.author           = { "bing" => "bing@abcpen.com" }
-  s.source           = { :git => 'https://github.com/BingO0o/ABCLiveKit.git'}
-  # s.source           = { :git => 'git@git.abcpen.com:pod_group/ABCLiveKit-Pod.git'}
+  # s.source           = { :git => 'https://github.com/BingO0o/ABCLiveKit.git'}
+  s.source           = { :git => 'git@git.abcpen.com:pod_group/ABCLiveKit-Pod.git'}
 
   s.platform         = :ios,'9.0'
   s.requires_arc     = true
@@ -17,6 +17,11 @@ Pod::Spec.new do |s|
     sp.source_files        = 'ABCLiveSDK/ABCCoreKit.framework/Headers/*.{h}'
     sp.vendored_frameworks = 'ABCLiveSDK/ABCCoreKit.framework'
     sp.pod_target_xcconfig = { 'ENABLE_BITCODE' => 'NO' }
+    sp.frameworks = "VideoToolbox", "AudioToolbox","AVFoundation","Foundation","UIKit"
+    sp.dependency 'Masonry'
+    sp.dependency 'SVProgressHUD'
+    sp.dependency 'Socket.IO-Client-Swift'
+    sp.dependency 'BFKit'
   end
 
   s.subspec 'ABCLiveUIKit' do |sp|

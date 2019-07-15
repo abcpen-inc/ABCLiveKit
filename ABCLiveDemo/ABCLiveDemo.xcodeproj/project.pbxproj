@@ -3,11 +3,10 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		97F11DB66589E21C66CBAE7A /* libPods-ABCLiveDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 59662FDC923F07BE551CEBAF /* libPods-ABCLiveDemo.a */; };
 		D74CD7D820CE53BC00C04EEC /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D74CD7D720CE53BC00C04EEC /* AppDelegate.m */; };
 		D74CD7DB20CE53BC00C04EEC /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D74CD7DA20CE53BC00C04EEC /* ViewController.m */; };
 		D74CD7DE20CE53BC00C04EEC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D74CD7DC20CE53BC00C04EEC /* Main.storyboard */; };
@@ -16,10 +15,9 @@
 		D74CD7E620CE53BE00C04EEC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D74CD7E520CE53BE00C04EEC /* main.m */; };
 		D74CD7F020CE53BE00C04EEC /* ABCLiveDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D74CD7EF20CE53BE00C04EEC /* ABCLiveDemoTests.m */; };
 		D74CD7FB20CE53BE00C04EEC /* ABCLiveDemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = D74CD7FA20CE53BE00C04EEC /* ABCLiveDemoUITests.m */; };
-		D74CD80920CE55BA00C04EEC /* SocketIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D74CD80820CE55BA00C04EEC /* SocketIO.framework */; };
-		D74CD80A20CE55BA00C04EEC /* SocketIO.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D74CD80820CE55BA00C04EEC /* SocketIO.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		D7C9C52820CFF58E002DC7E3 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D7C9C52620CFF58E002DC7E3 /* MainViewController.m */; };
 		D7C9C52920CFF58E002DC7E3 /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D7C9C52720CFF58E002DC7E3 /* MainViewController.xib */; };
+		F675CCAA9A792BE3AB118913 /* Pods_ABCLiveDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4BF2C26F3D6DBEADA6D4E921 /* Pods_ABCLiveDemo.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,23 +37,9 @@
 		};
 /* End PBXContainerItemProxy section */
 
-/* Begin PBXCopyFilesBuildPhase section */
-		D74CD80B20CE55BA00C04EEC /* Embed Frameworks */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-				D74CD80A20CE55BA00C04EEC /* SocketIO.framework in Embed Frameworks */,
-			);
-			name = "Embed Frameworks";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXCopyFilesBuildPhase section */
-
 /* Begin PBXFileReference section */
 		1D0AFAC77F4B369E12C0B695 /* Pods-ABCLiveDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ABCLiveDemo.debug.xcconfig"; path = "../Pods/Target Support Files/Pods-ABCLiveDemo/Pods-ABCLiveDemo.debug.xcconfig"; sourceTree = "<group>"; };
-		59662FDC923F07BE551CEBAF /* libPods-ABCLiveDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ABCLiveDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4BF2C26F3D6DBEADA6D4E921 /* Pods_ABCLiveDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ABCLiveDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D74CD7D320CE53BC00C04EEC /* ABCLiveDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ABCLiveDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D74CD7D620CE53BC00C04EEC /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		D74CD7D720CE53BC00C04EEC /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -84,8 +68,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				97F11DB66589E21C66CBAE7A /* libPods-ABCLiveDemo.a in Frameworks */,
-				D74CD80920CE55BA00C04EEC /* SocketIO.framework in Frameworks */,
+				F675CCAA9A792BE3AB118913 /* Pods_ABCLiveDemo.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -118,7 +101,7 @@
 		A8910A41B43C1B35CFF229D0 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				59662FDC923F07BE551CEBAF /* libPods-ABCLiveDemo.a */,
+				4BF2C26F3D6DBEADA6D4E921 /* Pods_ABCLiveDemo.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -195,7 +178,6 @@
 				D74CD7D020CE53BB00C04EEC /* Frameworks */,
 				D74CD7D120CE53BB00C04EEC /* Resources */,
 				99E46EF60271F4304D481DE9 /* [CP] Embed Pods Frameworks */,
-				D74CD80B20CE55BA00C04EEC /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -318,21 +300,16 @@
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputPaths = (
-				"${SRCROOT}/../Pods/Target Support Files/Pods-ABCLiveDemo/Pods-ABCLiveDemo-frameworks.sh",
-				"${PODS_ROOT}/../ABCLiveSDK/ABCCoreKit.framework",
-				"${PODS_ROOT}/../ABCLiveSDK/PenKit.framework",
-				"${PODS_ROOT}/../ABCLiveSDK/ABCUIKit.framework",
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ABCLiveDemo/Pods-ABCLiveDemo-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ABCCoreKit.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PenKit.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ABCUIKit.framework",
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ABCLiveDemo/Pods-ABCLiveDemo-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/../Pods/Target Support Files/Pods-ABCLiveDemo/Pods-ABCLiveDemo-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ABCLiveDemo/Pods-ABCLiveDemo-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		FB96D17783A5A0A63D4F8889 /* [CP] Check Pods Manifest.lock */ = {
@@ -532,10 +509,9 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 1D0AFAC77F4B369E12C0B695 /* Pods-ABCLiveDemo.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Manual;
-				DEVELOPMENT_TEAM = XYH562EV4N;
+				DEVELOPMENT_TEAM = 67W5984PLX;
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = ABCLiveDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
@@ -546,7 +522,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.abcpen.ABCLiveDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "06761f26-04e8-4093-af83-c4984b20f191";
-				PROVISIONING_PROFILE_SPECIFIER = Wildcard;
+				PROVISIONING_PROFILE_SPECIFIER = ABCPenWildcard;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -555,7 +531,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = DB238C69F7DD1D90045F3289 /* Pods-ABCLiveDemo.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = "";

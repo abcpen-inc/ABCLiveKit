@@ -13,8 +13,8 @@
 
 #import "MainViewController.h"
 
-#define ABC_LIVE_APP_ID     @""
-#define ABC_LIVE_APP_SECRET @""
+#define ABC_LIVE_APP_ID     @"93boVMNpj7fRGKgi6jCq1amgxBdldGyb"
+#define ABC_LIVE_APP_SECRET @"i5bdeGPrbMVc22wqpxtgk2AfCaeMfDY6"
 #define AUTH_DOMAIN         @"https://open.abcpen.com"
 
 @interface ViewController ()

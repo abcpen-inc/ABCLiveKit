@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = "ABCLive"
-  s.version          = "1.0.0"
+  s.version          = "1.1.0.6"
   s.summary          = "ABCLive."
   s.description      = "ABCLive of bing"
   s.homepage         = "http://www.abcpen.com"
@@ -15,6 +15,11 @@ Pod::Spec.new do |s|
     sp.source_files        = 'ABCLiveSDK/ABCCoreKit.framework/Headers/*.{h}'
     sp.vendored_frameworks = 'ABCLiveSDK/ABCCoreKit.framework'
     sp.pod_target_xcconfig = { 'ENABLE_BITCODE' => 'NO' }
+    sp.frameworks = "VideoToolbox", "AudioToolbox","AVFoundation","Foundation","UIKit"
+    sp.dependency 'Masonry'
+    sp.dependency 'SVProgressHUD'
+    sp.dependency 'Socket.IO-Client-Swift'
+    sp.dependency 'BFKit'
   end
 
   s.subspec 'ABCLiveUIKit' do |sp|
