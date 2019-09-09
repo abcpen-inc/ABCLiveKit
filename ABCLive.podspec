@@ -1,12 +1,12 @@
 Pod::Spec.new do |s|
   s.name             = "ABCLive"
-  s.version          = "1.2.0"
+  s.version          = "1.2.1"
   s.summary          = "ABCLive."
   s.description      = "ABCLive of bing"
   s.homepage         = "http://www.abcpen.com"
   s.license          = 'MIT'
   s.author           = { "bing" => "bing@abcpen.com" }
-  s.source           = { :git => 'https://github.com/abcpen-inc/ABCLiveKit.git'}
+  s.source           = { :git => 'https://github.com/abcpen-inc/ABCLiveKit.git',:tag => s.version}
   #s.source           = { :git => 'git@git.abcpen.com:pod_group/ABCLiveKit-Pod.git'}
 
   s.platform         = :ios,'9.0'
