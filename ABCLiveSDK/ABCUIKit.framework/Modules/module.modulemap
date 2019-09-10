@@ -4,3 +4,8 @@ framework module ABCUIKit {
   export *
   module * { export * }
 }
+
+module ABCUIKit.Swift {
+    header "ABCUIKit-Swift.h"
+    requires objc
+}

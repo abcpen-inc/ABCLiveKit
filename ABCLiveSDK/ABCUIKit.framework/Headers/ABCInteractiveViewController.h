@@ -19,5 +19,13 @@
 
 - (void)closeRoom:(BOOL) isNeedSend needDismiss:(BOOL)needDismiss;
 
+-(void) refreshToken:(void (^)(NSString *token)) tokenBlock;
+
+-(void) sendLocalMessage:(NSString *) content;
+
+-(void) onMessageRecive:(NSArray *) messages;
+
+-(void) sendMessage:(NSString *) msg;
+
 
 @end

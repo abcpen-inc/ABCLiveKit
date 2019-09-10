@@ -23,5 +23,11 @@
 
 - (void)onBlueToothClick;
 
+- (void)onLoginOtherDevice;
+
+- (void)onUploadImage:(UIImage *) image
+              success:(void (^)(NSString *imageUrl))success
+              failure:(void (^)(NSString *strMsg))fail;
+
 @end
 
